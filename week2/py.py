@@ -1,7 +1,3 @@
-from multiprocessing.dummy import Manager
-from unittest import result
-
-
 def calculate(min, max, step):
     result=0
     for n in range(min, max+1, step):
