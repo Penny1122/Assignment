@@ -101,6 +101,20 @@ body{
     justify-content: center;
     align-items: center;
     padding: 10px;
+   
+}
+
+.btn2 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid rgb(95, 180, 236);
+    padding: 10px;
+    border-radius: 6px;
+}
+/* 移入样式 */
+.btn2:hover {
+    background-color: rgb(95, 180, 236);
+    color: white;
 }
 @media (max-width:1200px){
     /*螢幕寬度小於1200px,套用此區塊的CSS*/
