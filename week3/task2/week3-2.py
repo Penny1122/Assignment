@@ -15,11 +15,11 @@ def getData(url):
     #print(titles)
     for title in titles:
         #print(title.a.string)
-        if (title.a !=None) and ("Re:" not in title.a.string) and "[好雷]" in title.a.string:
+        if title.a !=None and "Re:" not in title.a.string and "[好雷]" in title.a.string:
             good.append(title.a.string)
-        elif (title.a !=None) and ("Re:" not in title.a.string) and "[普雷]" in title.a.string:
+        elif title.a !=None and "Re:" not in title.a.string and "[普雷]" in title.a.string:
             normal.append(title.a.string)
-        elif (title.a !=None) and ("Re:" not in title.a.string) and "[負雷]" in title.a.string:
+        elif title.a !=None and "Re:" not in title.a.string and "[負雷]" in title.a.string:
             bad.append(title.a.string)
    
     #with open("movie.txt", mode="a", encoding="utf-8") as file:
