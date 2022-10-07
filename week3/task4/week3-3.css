@@ -115,6 +115,7 @@ body{
 .btn2:hover {
     background-color: rgb(95, 180, 236);
     color: white;
+    cursor: pointer;
 }
 @media (max-width:1200px){
     /*螢幕寬度小於1200px,套用此區塊的CSS*/
