@@ -14,7 +14,7 @@ def signin():
     if account == "test" and password == "test":
         session["account"]=account
         return redirect("/member")
-    elif account == "" or password =="":
+    elif account == None or password == None:
         return redirect("/error?message=請輸入帳號、密碼")
     else:
         return redirect("/error?message=帳號或密碼輸入錯誤")
