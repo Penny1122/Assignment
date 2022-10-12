@@ -1,0 +1,128 @@
+body{
+    margin:0px;
+    overflow-x: hidden;
+}
+.frame{
+    display: flex;
+    font-size: 20px;
+}
+.left{
+    flex:none; /*固定配置*/
+    padding-left: 10px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+}
+.right{
+    display:flex;
+    justify-content:flex-end;
+    flex:auto;
+}
+.item{
+    flex:none;
+    margin-right: 10px; /*與右方項目間隔10px */
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    display:block
+}
+.mobile-menu{
+    text-align:center;
+    display:none;
+    line-height: 30px;
+    height: 30px;
+}
+.welcome{
+    display:flex;
+    justify-content: center;
+    align-items: center; /*垂直對齊*/
+    height: 300px;
+    background-color:rgb(54, 136, 190) ;
+    margin-bottom: 15px;
+}
+.Welcome-text{
+    font-size: 40px; 
+    text-align: center;
+    font-weight: bold;
+}
+.promotion{
+    display:flex;
+    align-items: center;
+    height: 50px;
+    background-color:rgb(96, 179, 235) ;
+    flex:auto;
+    padding-left: 10px ;
+}
+.catframe{
+    display: flex;
+    font-size: 20px;
+    width: 1200px;
+    margin:0 auto;
+}
+.catframe img{
+    width: 80px ;
+    height: 50px;
+    object-fit: cover;
+}
+.line{
+    display: flex;
+    width: 1200px;
+    margin:0 auto;
+    gap:20px;
+}
+.gap{
+    display: flex;  
+    width: 1200px;
+    margin:20px auto;
+    gap:20px;
+    flex-wrap: wrap;
+}
+.titleframe{
+    flex:auto;
+}
+.titleframe img{
+    display:flex;
+    width: 285px ;
+    height: 200px;
+    object-fit: cover;
+}
+.title-text{
+    flex:auto;
+    text-align: center;
+    height: 30px;
+    background-color:rgb(95, 180, 236) ;
+    font-size: 20px;
+    line-height: 30px;
+}
+@media (max-width:1200px){
+    /*螢幕寬度小於1200px,套用此區塊的CSS*/
+    .gap{
+        width: 90%;
+    }
+    .line{
+        width: 90%;
+    }
+    .catframe{
+        width: 100%
+    }
+    .titleframe{
+        width: 45%;
+    }
+    .titleframe img{
+        width:100%;
+    }
+}
+@media (max-width:600px){
+    .line{
+        flex-wrap: wrap;
+    }
+    .titleframe{
+        width: 90%;
+    }
+    .item{
+        display:none;
+    }
+    .mobile-menu{
+        display:block;
+    }
+}
