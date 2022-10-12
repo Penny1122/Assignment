@@ -48,4 +48,5 @@ def result(Num):
     result=Num*Num
     return render_template("square.html", ans=result)
 
+
 app.run(port=3000)
