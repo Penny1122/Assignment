@@ -27,15 +27,20 @@
     </form>
     <hr/>
     <div class="loginsystem">計算正整數的平方</div>
-    <form action="/square">
-        <div class="login">
-            <div class="text">正整數</div>
-            <input type="text" name="number" class="input-text"/>
-        </div>
-        <div class="button">
-            <button class="btn">計算</button>
-        </div>
+    <div class="login">
+        <div class="text">正整數</div>
+        <input type="text" name="number" class="input-number"/>
+    </div>
+    <div class="button">
+        <button class="btn" id="btn">計算</button>
+    </div>
 
-    </form>
-    </body>
+    <script>
+        document.querySelector("#btn").addEventListener("click", function(){
+            let getNumber = document.querySelector(".input-number").value;
+            window.location.href="/square/"+getNumber; 
+        })
+
+    </script>
+</body>
 </html>

@@ -37,16 +37,12 @@ def signout():
     del session["account"]
     return redirect("/")
 
-@app.route("/square")
-def square():
-    number=request.args.get("number", "")
-    return redirect(url_for("result", Num=number))
-
-@app.route("/square/<string:Num>")
-def result(Num):
-    Num=int(Num)
+@app.route("/square/<getNumber>")
+def result(getNumber):
+    Num=int(getNumber)
     result=Num*Num
     return render_template("square.html", ans=result)
+
 
 
 app.run(port=3000)
