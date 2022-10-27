@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>會員系統</title>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+  </head>
+  <body>
+    <div class="title">
+      <div class="title-text">歡迎光臨，這是會員頁</div>
+    </div>
+    <div class="loginsystem">{{ name }}，歡迎登入系統</div>
+    <div class="button">
+      <a href="/signout">登出系統</a>
+    </div>
+    <div class="center">
+      <img src="line.png" />
+    </div>
+    <div class="loginsystem">大家來留言吧！</div>
+
+    <form action="/message" method="POST">
+      <div class="login">
+        <div class="text">內容</div>
+        <input type="text" name="content" class="input-text" required />
+      </div>
+      <div class="button">
+        <button class="btn">留言</button>
+      </div>
+    </form>
+    <div class="button">
+      <div class="board">
+        {%for i in content %}
+        <div class="center">{{ i[0] }}：{{ i[1] }}</div>
+        {% endfor %}
+      </div>
+    </div>
+  </body>
+</html>
